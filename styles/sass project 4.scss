@@ -1,5 +1,106 @@
 //sass goes here 
 //nothing on the other .index file should change
-h1{
-	background-color:blue;
+
+// write all sass first and then break into spearate partials
+// below
+ 
+// utilities
+// create a utilities folder and put everything below this in it,
+// called _index.scss, put in 
+// a partial called 1. variables
+
+// 2. mixins 
+
+// 3. placeholders
+
+
+// components
+// create a components folder and put everything below this in it,
+// also called _index.scss, except in different folder 
+// as the above 2
+
+
+// base
+// create a base folder and put everything below this in it,
+// also called _index.scss, except in different folder
+// create a partial for each one of these in this index folder 
+// Grid (recommend using flexbox)
+// Typography
+// Navigation
+// Images
+// Buttons
+// Forms 
+
+
+
+
+// create main styles.scss file to import 
+// all 3 indexes above 
+
+li{ 
+	list-style: none;
 }
+
+
+// change this media query to 480px before turning in
+
+@media (min-width: 548px){
+	.nav{
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		font-size: 1.4rem;
+		a {
+			text-decoration: none;
+			transition: color .2s ease-out;
+			color: black;
+			width: 100%;
+			margin: .6rem 0;
+			display: inline-block;
+			&:hover{
+				color: white;
+			}
+		}
+		li{
+			width: 100%;
+			
+			text-align: center;
+			border-radius: 1rem;
+			transition: background-color  .2s ease-out;
+			&:hover{
+				background-color: lightseagreen;
+			}
+		}
+	}
+	.link{
+		display: flex;
+		justify-content: center;
+		margin-bottom: 1.5rem;
+	}
+	p {
+		margin: 5rem 0;
+		color: grey;
+	}
+
+	.headline--primary{
+		margin-left: 2rem;
+		color: lightseagreen;
+	}
+
+	.headline--secondary{
+		font-weight: 100;
+		font-size: 1.2rem;
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
