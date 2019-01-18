@@ -31,9 +31,6 @@
 // Buttons
 // Forms 
 
-
-
-
 // create main styles.scss file to import 
 // all 3 indexes above 
 
@@ -41,13 +38,11 @@ li{
 	list-style: none;
 }
 
-
 // change this media query to 480px before turning in
 
 *{
 	font-family: 'Montserrat', sans-serif;
 }
-
 
 @media (min-width: 548px){
 	.nav{
@@ -390,6 +385,46 @@ li{
 // MOBILE LAYOUT DONE
 
 // next do media query for bigger screen and base styles
+// CHANGE MEDIA QUERY WIDTH BEFORE TURNING In
+@media (min-width: 1280px){
+	.nav{
+		flex-direction: row;
+		flex: 1;
+	}
+
+	.grid__row{
+		display: flex;
+		justify-content: space-between;
+	}
+
+	.grid__col--3{
+		flex: 1;
+	}
+
+	.grid__col--9{
+		flex: 1;
+	}
+
+	.img--logo{
+		float: left;
+	}
+
+	.link {
+    display: flex;
+    justify-content: flex-start;
+}
+
+	.img--avatar{
+	
+	}
+
+	.grid__col--4{
+		flex: 3;
+	}
+
+}
+
+
 
 // then put into scss
 
