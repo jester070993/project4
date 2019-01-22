@@ -454,6 +454,11 @@ li {
   .grid__row:nth-of-type(7) > .grid__col--6:nth-of-type(2) {
     margin-left: 2rem;
   }
+
+  .grid__row:nth-of-type(6) > .grid__col--12 {
+    display: flex;
+    justify-content: center;
+  }
 }
 
 /*# sourceMappingURL=output_css.css.map */
