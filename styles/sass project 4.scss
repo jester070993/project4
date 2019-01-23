@@ -1,265 +1,48 @@
-//sass goes here 
-//nothing on the other .index file should change
+//variables
+@import "scss/utilities/index";
 
-// write all sass first and then break into spearate partials
-// below
- 
-// utilities
-// create a utilities folder and put everything below this in it,
-// called _index.scss, put in 
-// a partial called 1. variables
+//base styles
+@import "scss/base/index";
 
-// 2. mixins 
+//components - butttons, form, images, blockquote.
+@import "scss/components/index";
 
-// 3. placeholders
-
-
-// components
-// create a components folder and put everything below this in it,
-// also called _index.scss, except in different folder 
-// as the above 2
-
-
-// base
-// create a base folder and put everything below this in it,
-// also called _index.scss, except in different folder
-// create a partial for each one of these in this index folder 
-// Grid (recommend using flexbox)
-// Typography
-// Navigation
-// Images
-// Buttons
-// Forms 
-
-// create main styles.scss file to import 
-// all 3 indexes above 
-
-li{ 
-	list-style: none;
-}
-
-// change this media query to 480px before turning in
-
-*{
-	font-family: 'Montserrat', sans-serif;
-}
-
+//!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+// change this media query to 480px before turning in !!!!!!!!!!!!!!!!!!!!!!
+//!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 @media (min-width: 548px){
-	.nav{
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		font-size: 1.4rem;
-		a {
-			flex: 1;
-			text-decoration: none;
-			transition: color .2s ease-out;
-			color: grey;
-			width: 100%;
-			// margin: .6rem 0;
-			display: inline-block;
-			&:hover{
-				color: white;
-			}
-		}
-		li{
-			width: 100%;
-			line-height: 3.8rem;
-			text-align: center;
-			border-radius: .5rem;
-			transition: background-color  .2s ease-out;
-			&:hover{
-				background-color: lightseagreen;
-			}
-		}
-	}
 
 	.card:nth-of-type(1) > p:first-child {
 		margin: 10rem 0;
 	}
 	
 	.link{
-		display: flex;
 		justify-content: center;
-		margin-bottom: 1.5rem;
 	}
+
 	p {
 		margin: 5rem 0;
-		color: grey;
+		color: $subheadline;
 		line-height: 2.5rem;
-
 		.link{
 			display: inline;
-			color: darkturquoise;
+			color: $inlineColor;
 			text-decoration: none;
 			font-weight: 900;
 		}
 	}
 
-	.headline--primary{
-		margin-left: 2rem;
-		color: lightseagreen;
-		font-weight: 900;
-	}
-
 	.headline--secondary{
-		font-weight: 100;
-		font-size: 1.4rem;
-		width: 100%;
-		text-align: left;
-		color: grey;
 		&:nth-of-type(2){
 			margin: 3rem 0;
 		}
 		&:nth-of-type(3){
 			margin: 3rem 0;
 		}
-
-	}
-
-	.blockquote{
-		border-left: darkturquoise solid .5rem;
-		// padding-left: 1rem;
-		// margin-left: 2rem;
-		margin: 6rem 1.5rem ;
-    	padding: .8rem 1rem;
-    	font-style: italic;
-    	font-weight: 600;
-    	color: grey;
-	}
-
-
-
-
-
-	.blockquote:before{
-		  content: open-quote;
-		  color: #ccc;
-		  font-size: 4rem;
-		    line-height: 0.1rem;
-		    position: absolute;
-	}
-
-	// .blockquote:after{
-	// 	  content: close-quote;
-	// 	  color: #ccc;
-	// 	  font-size: 4rem;
-	// 	    line-height: 0.1rem;
-	// 	    // position: absolute;
-	// }
-
-
-	.blockquote:after{
-		  content: close-quote;
-		  color: #ccc;
-		  font-size: 4rem;
-		    // line-height: 0.1rem;
-		    position: absolute;
-		    // top: 10px;
-
-    // line-height: 1;
-    // right:0;
-
-
-
-
-	}
-
-	.form{
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		&:last-child{
-			margin-bottom: 5rem;
-		}
-	}
-
-
-
-	.btn--default,
-	.btn--success,
-	.btn--error,
-	.btn--warning,
-	.btn--info,
-	{
-
-		width: 100%;
-		background-color: deepskyblue;
-		border-radius: .5rem;
-		border: none;
-		line-height: 4rem;
-		margin-top: 1.5rem;
-		text-transform: uppercase;
-		color: white;
-		font-weight: 700;
-		font-size: 1.4rem;
-
-	}
-
-	.btn--success{
-		background-color: lightgreen;
-	}
-	.btn--error{
-		background-color: salmon;
-	}
-	.btn--warning{
-		background-color: darkorange;
-	}
-	.btn--info{
-		background-color: violet;
-		margin-bottom: 3rem;
-	}
-
-
-	.form__input{
-		border: none;
-		border-bottom: .2rem solid darkturquoise;
-		// height: 2rem;
-		width: 100%;
-		&::placeholder{
-			color: dimgrey;
-			font-size: 1.2rem;
-			padding-left: 1rem;
-			font-weight: 800;
-		}
-	}
-
-	.form__label--hidden{
-		visibility: hidden;
-	}
-
-	.img--frame{
-	  padding: 0.8rem;
-      background-color: #fff;
- 	  border: 1px solid #dee2e6;
- 	  border-radius: 0.25rem;
- 	  margin: 5rem;
- 	  margin-bottom: 2.5rem;
- 	  width: 100%;
-	}
-
-	.grid__col--6{
-		display: flex;
-		flex-direction: column;
-		align-items: center;
 	}
 	
-	// .grid__col--12:last-child
-	 .grid__row:nth-of-type(6){
-		width: 100%;
-		background-color: lightseagreen;
-		line-height: 3rem;
-		border-radius: .5rem;
-		margin: 0 0 2rem;
-		padding-left: 2rem;
-		font-weight: 500;
-		font-color: grey;
-		font-size: 1.2rem;
-
-	}
-
 	.grid__row:nth-of-type(7) >  .grid__col--6{
-		background-color: steelblue;
+		background-color: $columnSix;
 		display: inline-block;
 		width: 100%;
 		border-radius: .5rem;
@@ -267,13 +50,13 @@ li{
 		line-height: 3rem;
 		padding-left: 2rem;
 		font-weight: 500;
-		font-color: grey;
+		font-color: $subheadline;
 		font-size: 1.2rem;
 
 	}
 
 	.grid__row:nth-of-type(8) >  .grid__col--4{
-		background-color: lightblue;
+		background-color: $primaryButton;
 		display: inline-block;
 		width: 100%;
 		border-radius: .5rem;
@@ -281,7 +64,7 @@ li{
 		line-height: 3rem;
 		padding-left: 2rem;
 		font-weight: 500;
-		font-color: grey;
+		font-color: $subheadline;
 		font-size: 1.2rem;
 
 	}
@@ -291,7 +74,7 @@ li{
 	}
 
 	.grid__row:nth-of-type(9) >  .grid__col--3{
-		background-color: violet;
+		background-color: $infoColor;
 		display: inline-block;
 		width: 100%;
 		border-radius: .5rem;
@@ -299,7 +82,7 @@ li{
 		line-height: 3rem;
 		padding-left: 2rem;
 		font-weight: 500;
-		font-color: grey;
+		font-color: $subheadline;
 		font-size: 1.2rem;
 
 	}
@@ -310,7 +93,7 @@ li{
 	}
 
 	.grid__row:nth-of-type(10) >  .grid__col--5{
-		background-color: lightgreen;
+		background-color: $successColor;
 		display: inline-block;
 		width: 100%;
 		border-radius: .5rem;
@@ -318,7 +101,7 @@ li{
 		line-height: 3rem;
 		padding-left: 2rem;
 		font-weight: 500;
-		font-color: grey;
+		font-color: $subheadline;
 		font-size: 1.2rem;
 
 		// including margin in this one, make sure to make it a mixin after 
@@ -326,7 +109,7 @@ li{
 	}
 
 		.grid__row:nth-of-type(10) >  .grid__col--7{
-			background-color: salmon;
+		background-color: $errorColor;
 		display: inline-block;
 		width: 100%;
 		border-radius: .5rem;
@@ -334,13 +117,13 @@ li{
 		line-height: 3rem;
 		padding-left: 2rem;
 		font-weight: 500;
-		font-color: grey;
+		font-color: $subheadline;
 		font-size: 1.2rem;
 			// including margin in this one, make sure to make it a mixin after 
 		margin-bottom: 2rem;
 	}
 		.grid__row:nth-of-type(11) >  .grid__col--8{
-			background-color: darkorange;
+		background-color: $warningColor;
 		display: inline-block;
 		width: 100%;
 		border-radius: .5rem;
@@ -348,12 +131,12 @@ li{
 		line-height: 3rem;
 		padding-left: 2rem;
 		font-weight: 500;
-		font-color: grey;
+		font-color: $subheadline;
 		font-size: 1.2rem;
 		}
 
 		.grid__row:nth-of-type(11) >  .grid__col--4{
-		background-color: lightblue;
+		background-color: $primaryButton;
 		display: inline-block;
 		width: 100%;
 		border-radius: .5rem;
@@ -361,12 +144,12 @@ li{
 		line-height: 3rem;
 		padding-left: 2rem;
 		font-weight: 500;
-		font-color: grey;
+		font-color: $subheadline;
 		font-size: 1.2rem;
 		}
 
 		.grid__row:nth-of-type(12) >  .grid__col--7{
-				background-color: salmon;
+		background-color: $errorColor;
 		display: inline-block;
 		width: 100%;
 		border-radius: .5rem;
@@ -374,7 +157,7 @@ li{
 		line-height: 3rem;
 		padding-left: 2rem;
 		font-weight: 500;
-		font-color: grey;
+		font-color: $subheadline;
 		font-size: 1.2rem;
 
 		margin-top: 2rem;
@@ -390,11 +173,11 @@ li{
 	.nav{
 		flex-direction: row;
 		flex: 1;
+		padding-right: 10rem;
 	}
 
 	.grid__row{
-	
-		    width: 100%;
+	width: 100%;
     display: flex;
     justify-content: space-around;
 	}
@@ -412,12 +195,7 @@ li{
 	}
 
 	.link {
-    display: flex;
-    justify-content: flex-start;
-}
-
-	.img--avatar{
-	
+	   justify-content: flex-start;
 	}
 
 	.grid__col--4{
@@ -430,16 +208,12 @@ li{
 		flex: 1;
 	}
 
-		.btn--default,
+	.btn--default,
 	.btn--success,
 	.btn--error,
 	.btn--warning,
 	.btn--info,{
 		margin: 2rem ;
-	}
-
-	.nav{
-		padding-right: 10rem;
 	}
 
 	.grid__col--8{
@@ -562,10 +336,6 @@ li{
   	}
 
 }
-
-
-
-// then put into scss
 
 
 
