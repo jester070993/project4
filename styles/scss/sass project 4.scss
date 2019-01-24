@@ -10,8 +10,9 @@
 //!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 // change this media query to 480px before turning in !!!!!!!!!!!!!!!!!!!!!!
 //!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-@media (min-width: 548px){
 
+
+@media (min-width: 548px){
 	.card:nth-of-type(1) > p:first-child {
 		margin: 10rem 0;
 	}
@@ -22,14 +23,6 @@
 
 	p {
 		margin: 5rem 0;
-		color: $subheadline;
-		line-height: 2.5rem;
-		.link{
-			display: inline;
-			color: $inlineColor;
-			text-decoration: none;
-			font-weight: 900;
-		}
 	}
 
 	.headline--secondary{
@@ -41,51 +34,13 @@
 		}
 	}
 	
-	.grid__row:nth-of-type(7) >  .grid__col--6{
-		background-color: $columnSix;
-		display: inline-block;
-		width: 100%;
-		border-radius: .5rem;
-		margin: .2rem 0;
-		line-height: 3rem;
-		padding-left: 2rem;
-		font-weight: 500;
-		font-color: $subheadline;
-		font-size: 1.2rem;
-
-	}
-
-	.grid__row:nth-of-type(8) >  .grid__col--4{
-		background-color: $primaryButton;
-		display: inline-block;
-		width: 100%;
-		border-radius: .5rem;
-		margin: .2rem 0;
-		line-height: 3rem;
-		padding-left: 2rem;
-		font-weight: 500;
-		font-color: $subheadline;
-		font-size: 1.2rem;
-
-	}
+	
 		
 	.grid__row:nth-of-type(8) >  .grid__col--4:nth-of-type(1){
 			margin-top: 2rem;
 	}
 
-	.grid__row:nth-of-type(9) >  .grid__col--3{
-		background-color: $infoColor;
-		display: inline-block;
-		width: 100%;
-		border-radius: .5rem;
-		margin: .2rem 0;
-		line-height: 3rem;
-		padding-left: 2rem;
-		font-weight: 500;
-		font-color: $subheadline;
-		font-size: 1.2rem;
 
-	}
 	
 	.grid__row:nth-of-type(9) >  .grid__col--3:nth-of-type(1){
 					margin-top: 2rem;
@@ -308,9 +263,9 @@
 	}
 
 	.grid__row:nth-of-type(11) > .grid__col--4{
-				margin-top: 2rem;
-				margin-left: 2rem;
-				text-align: center;
+			margin-top: 2rem;
+			margin-left: 2rem;
+			text-align: center;
 	}
 
 	.grid__row:nth-of-type(12) > .grid__col--7 {

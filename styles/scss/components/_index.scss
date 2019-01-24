@@ -2,19 +2,10 @@
 	.btn--success,
 	.btn--error,
 	.btn--warning,
-	.btn--info,
-	{
-		width: 100%;
-		background-color: $primaryButton;
-		border-radius: .5rem;
-		border: none;
-		line-height: 4rem;
-		margin-top: 1.5rem;
-		text-transform: uppercase;
-		color: $text;
-		font-weight: 700;
-		font-size: 1.4rem;
-	}
+	.btn--info
+		{
+		@extend %buttons;
+		}
 
 	.btn--success{
 		background-color: $successColor;
@@ -39,7 +30,7 @@
 		display: flex;
 		flex-direction: column;
 		align-items: center;
-		&:last-child{
+			&:last-child{
 			margin-bottom: 5rem;
 		}
 	}
@@ -58,31 +49,21 @@
 	}
 
 	// blockquote
-		.blockquote{
-		border-left: $inlineColor solid .5rem;
-		// padding-left: 1rem;
-		// margin-left: 2rem;
-		margin: 6rem 1.5rem ;
-    	padding: .8rem 1rem;
-    	font-style: italic;
-    	font-weight: 600;
-    	color: $subheadline;
+	.blockquote{
+			border-left: $inlineColor solid .5rem;
+			margin: 6rem 1.5rem ;
+	    	padding: .8rem 1rem;
+	    	font-style: italic;
+	    	font-weight: 600;
+	    	color: $subheadline;
+    	&:before {
+			@extend %quote;
+		}
+		&:after{
+			@extend %quote;
+		}
 	}
 
-	.blockquote:before{
-		  content: open-quote;
-		  color: $subheadline;
-		  font-size: 4rem;
-		  line-height: 0.1rem;
-		  position: absolute;
-	}
-
-	.blockquote:after{
-		  content: close-quote;
-		  color: $subheadline;
-		  font-size: 4rem;
-		  position: absolute;
-	}
 // headlines
 .headline--primary{
 		margin-left: 2rem;
@@ -121,20 +102,6 @@
 		align-items: center;
 	}
 
-
-//long column 12 
-		 .grid__row:nth-of-type(6){
-		width: 100%;
-		background-color: $headlineColor;
-		line-height: 3rem;
-		border-radius: .5rem;
-		margin: 0 0 2rem;
-		padding-left: 2rem;
-		font-weight: 500;
-		font-color: $subheadline;
-		font-size: 1.2rem;
-	}
-
 	// navigation
 
 	.nav{
@@ -166,7 +133,51 @@
 		}
 	}
 
+//paraphrahs and links
+
+p {	
+	color: $subheadline;
+	line-height: 2.5rem;
+	.link{
+		display: inline;
+		color: $inlineColor;
+		text-decoration: none;
+		font-weight: 900;
+		}
+	}
+
+//long column 12 
+		 .grid__row:nth-of-type(6){
+		background-color: $headlineColor;
+		@include column {
+			 margin: 0 0 2rem;
+		}
+	}
 
 
+// column 6
+.grid__row:nth-of-type(7) >  .grid__col--6{
+		background-color: $columnSix;
+		@include column{
+			margin-bottom: .4rem;
+		}
+	}
+
+	//column 4
+.grid__row:nth-of-type(8) >  .grid__col--4{
+		background-color: $primaryButton;
+		@include column{
+			margin-bottom: .4rem;
+		}
+		
+	}
+
+.grid__row:nth-of-type(9) >  .grid__col--3{
+		background-color: $infoColor;
+		@include column
+		{
+			margin-bottom: .4rem;
+		}
+	}
 
 
