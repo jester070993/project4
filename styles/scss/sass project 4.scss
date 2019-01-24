@@ -1,16 +1,13 @@
 //variables
 @import "utilities/index";
-
 //base styles
 @import "base/index";
-
 //components - butttons, form, images, blockquote.
 @import "components/index";
 
 //!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 // change this media query to 480px before turning in !!!!!!!!!!!!!!!!!!!!!!
 //!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-
 
 @media (min-width: 548px){
 	.card:nth-of-type(1) > p:first-child {
@@ -24,7 +21,6 @@
 	p {
 		margin: 5rem 0;
 	}
-
 	.headline--secondary{
 		&:nth-of-type(2){
 			margin: 3rem 0;
@@ -33,91 +29,14 @@
 			margin: 3rem 0;
 		}
 	}
-	
-	
 		
 	.grid__row:nth-of-type(8) >  .grid__col--4:nth-of-type(1){
 			margin-top: 2rem;
 	}
-
-
 	
 	.grid__row:nth-of-type(9) >  .grid__col--3:nth-of-type(1){
 					margin-top: 2rem;
-
 	}
-
-	.grid__row:nth-of-type(10) >  .grid__col--5{
-		background-color: $successColor;
-		display: inline-block;
-		width: 100%;
-		border-radius: .5rem;
-		margin: .2rem 0;
-		line-height: 3rem;
-		padding-left: 2rem;
-		font-weight: 500;
-		font-color: $subheadline;
-		font-size: 1.2rem;
-
-		// including margin in this one, make sure to make it a mixin after 
-		margin-top: 2rem;
-	}
-
-		.grid__row:nth-of-type(10) >  .grid__col--7{
-		background-color: $errorColor;
-		display: inline-block;
-		width: 100%;
-		border-radius: .5rem;
-		margin: .2rem 0;
-		line-height: 3rem;
-		padding-left: 2rem;
-		font-weight: 500;
-		font-color: $subheadline;
-		font-size: 1.2rem;
-			// including margin in this one, make sure to make it a mixin after 
-		margin-bottom: 2rem;
-	}
-		.grid__row:nth-of-type(11) >  .grid__col--8{
-		background-color: $warningColor;
-		display: inline-block;
-		width: 100%;
-		border-radius: .5rem;
-		margin: .2rem 0;
-		line-height: 3rem;
-		padding-left: 2rem;
-		font-weight: 500;
-		font-color: $subheadline;
-		font-size: 1.2rem;
-		}
-
-		.grid__row:nth-of-type(11) >  .grid__col--4{
-		background-color: $primaryButton;
-		display: inline-block;
-		width: 100%;
-		border-radius: .5rem;
-		margin: .2rem 0;
-		line-height: 3rem;
-		padding-left: 2rem;
-		font-weight: 500;
-		font-color: $subheadline;
-		font-size: 1.2rem;
-		}
-
-		.grid__row:nth-of-type(12) >  .grid__col--7{
-		background-color: $errorColor;
-		display: inline-block;
-		width: 100%;
-		border-radius: .5rem;
-		margin: .2rem 0;
-		line-height: 3rem;
-		padding-left: 2rem;
-		font-weight: 500;
-		font-color: $subheadline;
-		font-size: 1.2rem;
-
-		margin-top: 2rem;
-		}
-
 }
 
 // MOBILE LAYOUT DONE
@@ -243,7 +162,6 @@
 	.grid__row:nth-of-type(10) > .grid__col--5{
 		margin-bottom: 0;
 		text-align: center;
-
 
 	}
 
