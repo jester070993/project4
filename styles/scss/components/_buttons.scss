@@ -1,0 +1,45 @@
+.btn--default,
+.btn--success,
+.btn--error,
+.btn--warning,
+.btn--info,	{
+		@extend %buttons;
+}
+
+.btn--success{
+	background-color: $successColor;
+}
+.btn--error{
+	background-color: $errorColor;
+}
+.btn--warning{
+	background-color: $warningColor;
+}
+.btn--info{
+	background-color: $infoColor;
+	margin-bottom: 3rem;
+}
+
+.grid__col--12{
+	@media (min-width: $vp_large){
+		display: flex;
+		width: 100%;
+		flex: 1;
+		.btn--default,
+		.btn--success,
+		.btn--error,
+		.btn--warning,
+		.btn--info,{
+			margin: 2rem ;
+		}
+	}
+}
+
+// multicolored buttons 
+.grid__row{
+	@media (min-width: $vp_large){
+		width: 100%;
+		display: flex;
+		justify-content: space-around;
+	  }
+}

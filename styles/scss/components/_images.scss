@@ -1,0 +1,14 @@
+// image / avitar 
+.img--frame{
+	 @extend %img-frame; 
+	}
+	
+
+.grid__col--6{
+	& > .img--avatar {
+	@media (min-width: $vp_large) {
+		margin-top: 5rem;
+		margin-right: 7rem;
+		 }
+	}
+}	

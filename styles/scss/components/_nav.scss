@@ -1,0 +1,28 @@
+
+	// navigation
+
+
+.grid__row{
+	@media (min-width: $vp_large){
+		width: 100%;
+		display: flex;
+		justify-content: space-around;
+	  }
+}
+
+
+.nav{
+	@include nav {
+		padding: 0;
+	}
+	.nav__item {
+		@extend %navItems;
+	}
+	@media (min-width: $vp_small) {
+		margin-bottom: 10rem
+	}
+	@media (min-width: $vp_large) {
+		flex-direction: row;
+		margin-right: 10rem;
+	}
+}

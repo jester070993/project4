@@ -1,12 +1,8 @@
-$inlineColor: darkturquoise;
-$headlineColor: lightseagreen;
-$subheadline: grey;
-$primaryButton: deepskyblue;
-$successColor: lightgreen;
-$errorColor: salmon;
-$warningColor: darkorange;
-$infoColor: violet;
-$borderColor: lighten($subheadline, 45%);
-$text: white;
-$columnSix: steelblue;
+//variables 
+@import "variables.scss" ;
 
+//mixins, media queries, and flex layout
+@import "mixins.scss" ;
+
+//placeholders for buttons, links, nav elements, images, headlines, blockquote
+@import "placeholder.scss";

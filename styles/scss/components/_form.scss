@@ -1,0 +1,43 @@
+.form__label--hidden{
+	visibility: hidden;
+}
+
+.form{
+	@include col6Form {
+		&:last-child {
+			margin-bottom: 5rem;
+		}
+	}
+	@media (min-width: $vp_large) { 
+		margin-top: 4rem;
+		margin-left: 3rem;
+			& > .img--avatar {
+				margin-top: 3rem;
+		}
+	}	
+}
+
+.form__input{
+	border: none;
+	border-bottom: .2rem solid $inlineColor;
+	// height: 2rem;
+	width: 100%;
+	line-height: 2rem;
+	&::placeholder{
+		color: $subheadline;
+		font-size: 1.2rem;
+		padding-left: 1rem;
+		font-weight: 800;
+	}
+}
+
+// form spacing
+.grid__col--6{
+	@include col6Form;
+}
+
+.grid__col--4{
+	@media (min-width: $vp_large){
+		flex: 3;
+		}
+	}
