@@ -96,6 +96,14 @@ p .link {
   }
 }
 
+@media (min-width: 1280px) {
+  .grid__row {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+  }
+}
+
 .form__label--hidden {
   visibility: hidden;
 }
