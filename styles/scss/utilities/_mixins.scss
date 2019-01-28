@@ -49,3 +49,16 @@
 	align-items: center;
 	@content;
 }
+
+//media queries 
+@mixin smallScreen {
+	@media (min-width: $vp_small) {
+		@content;
+	}
+}
+
+@mixin largeScreen {
+	@media (min-width: $vp_small) {
+		@content;
+	}
+}

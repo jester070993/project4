@@ -6,7 +6,7 @@
 
 .grid__col--6{
 	& > .img--avatar {
-	@media (min-width: $vp_large) {
+	@include largeScreen {
 		margin-top: 5rem;
 		margin-right: 7rem;
 		 }

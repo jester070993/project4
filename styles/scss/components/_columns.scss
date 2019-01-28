@@ -1,6 +1,6 @@
 //col. 8 and col. 4 spacing
 .grid__col--8{
-	@media (min-width: $vp_large){
+	@include largeScreen {
 		flex: 5; 
 		margin-top: 2rem;
 		text-align: center;
@@ -21,13 +21,13 @@
 		 @include column {
 			background-color: $columnSix;
 			margin-bottom: .4rem;
-			@media (min-width: $vp_large){
+			@include largeScreen {
 				text-align: center;
 		 		}	
 			}
 		}
 	& > .grid__col--6:nth-of-type(2) {
-			@media (min-width: $vp_large){
+			@include largeScreen {
 				margin-left: 2rem;
 				}
 		}		
@@ -39,24 +39,24 @@
 		@include column {
 			margin-bottom: .4rem;
 			background-color: $primaryButton;
-			@media (min-width: $vp_large) {
+			@include largeScreen {
 				margin: 2rem 0;
 				text-align: center;
 				}
 			}
   		 }
 		& > .grid__col--4:nth-of-type(1) {
-			@media (min-width: $vp_small) {	
+			@include smallScreen {	
 				margin-top: 2rem;
 			}
 		}
   		 & > .grid__col--4:nth-of-type(2) { 
-  		 	@media (min-width: $vp_large) {
+  		 	@include largeScreen {
   		 		margin: 2rem 2rem;
   		 	}
   		}
   		 & > .grid__col--4:nth-of-type(3) { 
-  		 	@media (min-width: $vp_small) {
+  		 	@include smallScreen {
   		 		margin-bottom: 2rem;
   		 	}			
 		}
@@ -67,7 +67,7 @@
 		@include column {
 			background-color: $infoColor;
 		 	margin-bottom: .4rem;
-		 	@media (min-width: $vp_large){
+		 	@include largeScreen {
 				text-align: center;
 				margin-bottom: 0;
 		 	 	 }
@@ -75,17 +75,18 @@
 		}
 	& > .grid__col--3:nth-of-type(2),
 	& > .grid__col--3:nth-of-type(3) {
-		@media (min-width: $vp_large) { 
+		@include largeScreen { 
 			margin-right: 2rem; 
 		} 
 	}
 	& > .grid__col--3:nth-of-type(1){
-		@media (min-width: $vp_small) {
+		@include smallScreen {
 			margin-bottom: .4rem;
 		}
-		@media (min-width: $vp_large) {
+		@include largeScreen {
 			margin-top: 0;
 			margin-right: 2rem; 
+			margin-bottom: 0;
 			}			
 		}
 }
@@ -96,7 +97,7 @@
 		background-color: $successColor;
 		margin-top: 2rem;
 		margin-bottom: .4rem;
-		@media (min-width: $vp_large) {
+		@include largeScreen {
 			margin-bottom: 0;
 			text-align: center;
 		 		}
@@ -109,7 +110,7 @@
 		@include column {
 			background-color: $errorColor; 
 			margin-bottom: 2rem;
-			@media (min-width: $vp_large){
+			@include largeScreen {
 				margin-top: 2rem;
 				margin-bottom: 0;
 				width: 150%;
@@ -133,7 +134,7 @@
 	& >  .grid__col--4 {
 			@include column {
 				background-color: $primaryButton;
-				@media (min-width: $vp_large) {
+				@include largeScreen {
 					margin-top: 2rem;
 					margin-left: 2rem;
 					text-align: center;
@@ -148,7 +149,7 @@
 			background-color: $errorColor;
 			margin-top: 2rem;
 			margin-bottom: 2rem;
-			@media (min-width: $vp_large){
+			@include largeScreen {
 				width: 50%;
 				text-align: center;
 					}
@@ -158,7 +159,7 @@
 
 .grid__row:nth-of-type(6){ 
 	& > .grid__col--12 {
-		@media (min-width: $vp_large) {
+		@include largeScreen {
 			@include flexCenter;
 			}
 		}	
