@@ -58,7 +58,7 @@
 }
 
 @mixin largeScreen {
-	@media (min-width: $vp_small) {
+	@media (min-width: $vp_large) {
 		@content;
 	}
 }
